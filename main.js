@@ -109,10 +109,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lang-btn').forEach(button => {
         button.addEventListener('click', () => {
             currentLanguage = button.dataset.lang;
-            // For now, we only have Spanish content
-            populateContent(contentEs);
-            populateContent(contentEn);
-            populateContent(contentFr);
+
+            // Apply the corresponding language content
+            if (currentLanguage === 'es') {
+                populateContent(contentEs);
+            } else if (currentLanguage === 'en') {
+                populateContent(contentEn);
+            } else if (currentLanguage === 'fr') {
+                populateContent(contentFr);
+            }
+
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.lang === currentLanguage);
             });
