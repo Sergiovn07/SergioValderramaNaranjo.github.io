@@ -1,91 +1,10 @@
 // Theme management
-let currentTheme = 'robotics';
-let isDarkMode = false;
+let currentTheme = 'ai';
+let isDarkMode = true; // Set dark mode as default
 let currentLanguage = 'es';
 
-// Theme switching
-function setEngineeringTheme(theme) {
-    document.body.setAttribute('data-engineering-theme', theme);
-    currentTheme = theme;
-    document.querySelectorAll('.theme-button').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.theme === theme);
-    });
-}
 
-// Dark mode toggle
-function toggleDarkMode() {
-    isDarkMode = !isDarkMode;
-    document.body.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
-}
-
-// Language switching
-async function setLanguage(lang) {
-    try {
-        const response = await fetch(`contents/content_${lang}.txt`);
-        const text = await response.text();
-        const content = parseContent(text);
-        populateContent(content);
-        currentLanguage = lang;
-        
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.lang === lang);
-        });
-    } catch (error) {
-        console.error('Error loading language content:', error);
-    }
-}
-
-// Content parsing
-function parseContent(text) {
-    const content = {};
-    let currentKey = '';
-    let currentItems = [];
-
-    text.split('\n').forEach(line => {
-        line = line.trim();
-        if (!line) return;
-
-        if (line.startsWith('#')) {
-            if (currentItems.length > 0) {
-                content[currentKey] = currentItems;
-                currentItems = [];
-            }
-            currentKey = line.substring(2);
-            return;
-        }
-
-        if (line.startsWith('[')) {
-            const type = line.substring(1, line.indexOf(']')).trim();
-            const value = line.substring(line.indexOf(']') + 1).trim();
-            
-            if (type === 'TITLE') {
-                currentItems.push({ title: value });
-            } else if (type === 'DESC') {
-                currentItems[currentItems.length - 1].description = value;
-            } else {
-                content[currentKey] = content[currentKey] || {};
-                content[currentKey][type.toLowerCase()] = value;
-            }
-        } else {
-            if (currentItems.length > 0 || currentKey.endsWith('_ITEMS')) {
-                currentItems.push(line);
-            } else {
-                content[currentKey] = line;
-                if (currentKey === 'NAVIGATION') {
-                    content[currentKey] = line.split(' ');
-                }
-            }
-        }
-    });
-
-    if (currentItems.length > 0) {
-        content[currentKey] = currentItems;
-    }
-
-    return content;
-}
-
-// Content population
+// Content management
 function populateContent(content) {
     // Header
     document.querySelector('.header-title').textContent = content.HEADER_TITLE;
@@ -144,64 +63,56 @@ function populateContent(content) {
 
     // Social links
     const socialLinks = content.CONTACTO_SOCIAL;
-    if (socialLinks.linkedin) {
-        document.querySelector('.social-link.linkedin').href = socialLinks.linkedin;
+    if (socialLinks.LINKEDIN) {
+        document.querySelector('.social-link.linkedin').href = socialLinks.LINKEDIN;
     }
-    if (socialLinks.github) {
-        document.querySelector('.social-link.github').href = socialLinks.github;
+    if (socialLinks.GITHUB) {
+        document.querySelector('.social-link.github').href = socialLinks.GITHUB;
     }
-    if (socialLinks.twitter) {
-        document.querySelector('.social-link.twitter').href = socialLinks.twitter;
+    if (socialLinks.TWITTER) {
+        document.querySelector('.social-link.twitter').href = socialLinks.TWITTER;
     }
 }
 
-// Event Listeners
+function setEngineeringTheme(theme) {
+    document.body.setAttribute('data-engineering-theme', theme);
+    currentTheme = theme;
+    document.querySelectorAll('.theme-button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.theme === theme);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    // Set initial dark mode
+    document.body.setAttribute('data-theme', 'dark');
+    
     // Theme buttons
     document.querySelectorAll('.theme-button').forEach(button => {
         button.addEventListener('click', () => setEngineeringTheme(button.dataset.theme));
     });
 
     // Dark mode toggle
-    document.querySelector('.dark-mode-toggle').addEventListener('click', toggleDarkMode);
+    document.querySelector('.dark-mode-toggle')?.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+        document.body.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+    });
 
     // Language buttons
     document.querySelectorAll('.lang-btn').forEach(button => {
-        button.addEventListener('click', () => setLanguage(button.dataset.lang));
-    });
-
-    // Mobile menu
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const mobileNav = document.querySelector('.mobile-nav');
-    
-    mobileMenuButton.addEventListener('click', () => {
-        mobileNav.classList.toggle('hidden');
-    });
-
-    document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileNav.classList.add('hidden');
+        button.addEventListener('click', () => {
+            currentLanguage = button.dataset.lang;
+            // For now, we only have Spanish content
+            populateContent(contentEs);
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === currentLanguage);
+            });
         });
     });
 
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
+    // Initial content load
+    populateContent(contentEs);
+    setEngineeringTheme(currentTheme);
 
     // Copyright year
     document.getElementById('current-year').textContent = new Date().getFullYear();
-
-    // Initial content load
-    setLanguage(currentLanguage);
-    setEngineeringTheme(currentTheme);
 });

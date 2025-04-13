@@ -1,11 +1,10 @@
-/* Base styles */
 :root {
-    /* Light theme variables */
-    --primary-color: #4a5568;
-    --text-color: #2d3748;
-    --background-color: #f7fafc;
-    --card-background: #ffffff;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    /* Dark theme variables (now default) */
+    --primary-color: #a0aec0;
+    --text-color: #f7fafc;
+    --background-color: #1a202c;
+    --card-background: #2d3748;
+    --shadow-color: rgba(0, 0, 0, 0.3);
 
     /* Theme-specific colors */
     --robotics-primary: #3182ce;
@@ -16,13 +15,13 @@
     --vision-accent: #2f855a;
 }
 
-/* Dark theme variables */
-[data-theme="dark"] {
-    --primary-color: #a0aec0;
-    --text-color: #f7fafc;
-    --background-color: #1a202c;
-    --card-background: #2d3748;
-    --shadow-color: rgba(0, 0, 0, 0.3);
+/* Light theme variables */
+[data-theme="light"] {
+    --primary-color: #4a5568;
+    --text-color: #2d3748;
+    --background-color: #f7fafc;
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Theme-specific styles */
@@ -269,7 +268,6 @@ a:hover {
 
 .profile-image {
     width: 16rem;
-    /* height: 16rem; */
     object-fit: cover;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px var(--shadow-color);

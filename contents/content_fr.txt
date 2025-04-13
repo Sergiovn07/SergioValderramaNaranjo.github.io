@@ -17,9 +17,11 @@ Ici je partagerai mes pensées, projets et ressources.
 À Propos
 
 # SOBRE_MI_DETAILS
+--start
 Ingénieur Mécatronique | Ingénieur Généraliste à l'Universidad EIA et ENSAM Lille.
 Master en Systèmes Mécatroniques pour l'Innovation Industrielle.
 Actuellement Ingénieur en Développement Robotique au LISPEN Lab Research.
+--end
 
 # EXPERIENCIA_TITLE
 Expérience

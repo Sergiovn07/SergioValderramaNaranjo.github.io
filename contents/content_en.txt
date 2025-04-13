@@ -17,9 +17,11 @@ Here I will share my thoughts, projects, and resources.
 About Me
 
 # SOBRE_MI_DETAILS
+--start
 Mechatronic Engineer | General Engineer at Universidad EIA and ENSAM Lille.
 Master in Mechatronic Systems for Industrial Innovation.
 Current Robotics Development Engineer at LISPEN Lab Research.
+--end
 
 # EXPERIENCIA_TITLE
 Experience

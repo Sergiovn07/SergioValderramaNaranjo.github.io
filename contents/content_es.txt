@@ -17,7 +17,9 @@ Aquí compartiré mis quién soy, proyectos y recursos.
 Sobre mí
 
 # SOBRE_MI_DETAILS
+--start
 Actualmente, Ingeniero en Desarrollo Robótico en el laboratio de investigación LISPEN de la escuela de ingeniería ENSAM de Lille, Francia. En febrero del 2025 obtuve mi doble título como ingeniero mecatrónico de la Universidad EIA de Medellín, Colomnbia y diploma de Ingeniero con maestría en systemas roboticos industriales de ENSAM en Lille, Francia.
+--end
 
 # EXPERIENCIA_TITLE
 Experiencia
