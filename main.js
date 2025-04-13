@@ -8,7 +8,7 @@ let currentLanguage = 'es';
 function populateContent(content) {
     // Header
     document.querySelector('.header-title').textContent = content.HEADER_TITLE;
-    document.querySelector('.footer-text').textContent = content.HEADER_TITLE;
+    document.querySelector('.footer-text').textContent = content.FOOTER_NOTE;
 
     // Navigation
     const navItems = content.NAVIGATION;
@@ -30,18 +30,24 @@ function populateContent(content) {
     document.querySelector('#experiencia .section-title').textContent = content.EXPERIENCIA_TITLE;
     document.querySelector('#experiencia .grid').innerHTML = content.EXPERIENCIA_ITEMS
         .map(item => `
-            <div class="card">
-                <h3>${item.title}</h3>
-                <p>${item.description}</p>
+           <div class="card">
+                <img src="${item.logo}" alt="logo">
+                <div>
+                    <h3>${item.title}</h3>
+                    <p>${item.description}</p>
+                </div>
             </div>
         `).join('');
 
     document.querySelector('#formacion .section-title').textContent = content.FORMACION_TITLE;
     document.querySelector('#formacion .grid').innerHTML = content.FORMACION_ITEMS
         .map(item => `
-            <div class="card">
-                <h3>${item.title}</h3>
-                <p>${item.description}</p>
+           <div class="card">
+                <img src="${item.logo}" alt="logo">
+                <div>
+                    <h3>${item.title}</h3>
+                    <p>${item.description}</p>
+                </div>
             </div>
         `).join('');
 
@@ -49,8 +55,10 @@ function populateContent(content) {
     document.querySelector('#proyectos .grid').innerHTML = content.PROYECTOS_ITEMS
         .map(item => `
             <div class="card">
-                <h3>${item.title}</h3>
-                <p>${item.description}</p>
+                <div>
+                    <h3>${item.title}</h3>
+                    <p>${item.description}</p>
+                </div>
             </div>
         `).join('');
 
