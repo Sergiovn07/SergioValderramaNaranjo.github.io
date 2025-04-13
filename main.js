@@ -111,6 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
             currentLanguage = button.dataset.lang;
             // For now, we only have Spanish content
             populateContent(contentEs);
+            populateContent(contentEn);
+            populateContent(contentFr);
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.toggle('active', btn.dataset.lang === currentLanguage);
             });
@@ -118,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initial content load
-    populateContent(contentEs);
+    populateContent(contentEn);
     setEngineeringTheme(currentTheme);
 
     // Copyright year
