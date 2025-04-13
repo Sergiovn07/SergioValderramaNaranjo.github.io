@@ -1,0 +1,68 @@
+# HEADER_TITLE
+Mon Blog Personnel
+
+# NAVIGATION
+accueil a-propos experience formation projets competences contact
+
+# INICIO_TITLE
+Bienvenue sur mon Blog
+
+# INICIO_IMAGE
+https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80
+
+# INICIO_DESCRIPTION
+Ici je partagerai mes pensées, projets et ressources.
+
+# SOBRE_MI_TITLE
+À Propos
+
+# SOBRE_MI_DETAILS
+Ingénieur Mécatronique | Ingénieur Généraliste à l'Universidad EIA et ENSAM Lille.
+Master en Systèmes Mécatroniques pour l'Innovation Industrielle.
+Actuellement Ingénieur en Développement Robotique au LISPEN Lab Research.
+
+# EXPERIENCIA_TITLE
+Expérience
+
+# EXPERIENCIA_ITEMS
+[TITLE] Développeur chez Rustique
+[DESC] Ingénieur Chef de Projet ESPON COD.
+
+# FORMACION_TITLE
+Formation
+
+# FORMACION_ITEMS
+[TITLE] Arts et Métiers ParisTech École Nationale Supérieure
+[DESC] Master en Ingénierie MATLAB et Programmation Avancée.
+[TITLE] Universidad EIA École d'Ingénierie
+[DESC] 2014 - 2018 Programme d'Ingénierie spécialisé en Automatisation.
+
+# PROYECTOS_TITLE
+Projets
+
+# PROYECTOS_ITEMS
+[TITLE] Calibration Hybride de Bras Robotique
+[DESC] Système de calibration automatique pour robots FANUC série M.
+[TITLE] Prédiction des Mélanges de Peinture par IA
+[DESC] Système automatisé de mélange de peinture utilisant l'apprentissage automatique.
+
+# HABILIDADES_TITLE
+Compétences
+
+# HABILIDADES_ITEMS
+Automatisation des Processus Embarqués (APE)
+JavaScript
+Python
+Robotique
+Apprentissage Automatique
+
+# CONTACTO_TITLE
+Contact
+
+# CONTACTO_EMAIL
+votre.email@exemple.com
+
+# CONTACTO_SOCIAL
+[LINKEDIN] https://linkedin.com/in/yourusername
+[GITHUB] https://github.com/yourusername
+[TWITTER] https://twitter.com/yourusername

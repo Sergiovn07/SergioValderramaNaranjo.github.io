@@ -1,99 +1,154 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Blog Personal</title>
+    <title>Modern Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Mi Blog Personal</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#formacion">Formación</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title"></h1>
+                
+                <div class="theme-controls">
+                    <!-- Theme Switcher -->
+                    <button class="theme-button" data-theme="robotics" aria-label="Robotics theme">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="8"/>
+                            <path d="M12 2v2M12 20v2M2 12h2M20 12h2"/>
+                        </svg>
+                    </button>
+                    <button class="theme-button" data-theme="ai" aria-label="AI theme">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2"/>
+                            <path d="M12 8v8M8 12h8"/>
+                        </svg>
+                    </button>
+                    <button class="theme-button" data-theme="vision" aria-label="Vision theme">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="2"/>
+                            <path d="M22 12c-2.667 4.667-6 7-10 7s-7.333-2.333-10-7c2.667-4.667 6-7 10-7s7.333 2.333 10 7"/>
+                        </svg>
+                    </button>
+
+                    <!-- Dark Mode Toggle -->
+                    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"/>
+                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                        </svg>
+                    </button>
+
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="es">ES</button>
+                        <button class="lang-btn" data-lang="fr">FR</button>
+                    </div>
+                </div>
+
+                <button class="mobile-menu-button" aria-label="Toggle menu">
+                    <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="6" x2="20" y2="6"></line>
+                        <line x1="4" y1="18" x2="20" y2="18"></line>
+                    </svg>
+                </button>
+
+                <nav class="desktop-nav">
+                    <ul></ul>
+                </nav>
+            </div>
+
+            <nav class="mobile-nav hidden">
+                <ul></ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="inicio">
-            <h2>Bienvenido a mi Blog</h2>
-            <img src="SVA.jpg" alt="Mi Imagen" width="250">
-            <p>Aquí compartiré mis pensamientos, proyectos y recursos.</p>
+        <section id="inicio" class="section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+                <div class="inicio-content">
+                    <img class="profile-image" alt="Profile">
+                    <p class="intro-text"></p>
+                </div>
+            </div>
         </section>
 
-        <section id="sobre-mi">
-            <h2>Sobre mí</h2>
-            <p>Ingeniero Mecatrónico | Ingénieur Géneraliste At Universidad EIA and ENSAM Lille.</p>
-            <p>Master in Systèmes Mécatroniques pour l'Innovation Industrielle.</p>
-            <p>Actuelle Ingénieur en Développement Robotique at LISPEN Lab Research.</p>
+        <section id="sobre-mi" class="section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+                <div class="sobre-mi-content"></div>
+            </div>
         </section>
 
-        <section id="experiencia">
-            <h2>Experiencia</h2>
-            <div id="experiencia-content">
-                <div class="experiencia-item">
-                    <h3>Dévet en Rustique</h3>
-                    <p>ESPON COD Laune Huches M Relat[cite: 1].</p>
-                </div>
-                </div>
+        <section id="experiencia" class="section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+                <div class="grid"></div>
+            </div>
         </section>
 
-        <section id="formacion">
-            <h2>Formación</h2>
-            <div id="formacion-content">
-                <div class="formacion-item">
-                    <h3>Arts et Metiers ParisTech Ecole Nationale Superieure d'Arts et Metiers</h3>
-                    <p>Matter of Fingering fing PMATLAB 2 de pho[cite: 2].</p>
-                </div>
-                <div class="formacion-item">
-                    <h3>Universidad BBA Esla de ingura de Antioquia</h3>
-                    <p>2018 - 2014 Program MAPLA2os de phu[cite: 2].</p>
-                </div>
-                </div>
+        <section id="formacion" class="section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+                <div class="grid"></div>
+            </div>
         </section>
 
-        <section id="proyectos">
-            <h2>Proyectos</h2>
-            <div id="proyectos-content">
-                <div class="proyecto-item">
-                    <h3>Calibration Hybride d'un Bras Robotique  l'aide</h3>
-                    <p>Appage automatique Pragunamun at 5 comptes FANUC M-TROICIS Nehot ping[cite: 2].</p>
-                </div>
-                 <div class="proyecto-item">
-                    <h3>Prediction des malanges de peinture  Taicio de T'IA</h3>
-                    <p>Appage automatique ? compétences it ph FPT ZA[cite: 3].</p>
-                </div>
-                </div>
+        <section id="proyectos" class="section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+                <div class="grid"></div>
+            </div>
         </section>
 
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <div id="habilidades-content">
-                <p>Automatization des processus embotisás (AP) JavaScript[cite: 3].</p>
-                </div>
+        <section id="habilidades" class="section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+                <div class="skills-grid"></div>
+            </div>
         </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme a través de [tu correo electrónico] o [tus redes sociales].</p>
+        <section id="contacto" class="section">
+            <div class="container">
+                <h2 class="section-title"></h2>
+                <div class="contact-content">
+                    <p class="email"></p>
+                    <div class="social-links">
+                        <a href="" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="social-link github">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer" class="social-link twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Mi Blog Personal</p>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> <span class="footer-text"></span></p>
+        </div>
     </footer>
 
     <script src="main.js"></script>
 </body>
-
 </html>

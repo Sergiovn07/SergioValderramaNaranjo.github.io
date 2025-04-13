@@ -1,0 +1,68 @@
+# HEADER_TITLE
+My Personal Blog
+
+# NAVIGATION
+home about experience education projects skills contact
+
+# INICIO_TITLE
+Welcome to my Blog
+
+# INICIO_IMAGE
+https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80
+
+# INICIO_DESCRIPTION
+Here I will share my thoughts, projects, and resources.
+
+# SOBRE_MI_TITLE
+About Me
+
+# SOBRE_MI_DETAILS
+Mechatronic Engineer | General Engineer at Universidad EIA and ENSAM Lille.
+Master in Mechatronic Systems for Industrial Innovation.
+Current Robotics Development Engineer at LISPEN Lab Research.
+
+# EXPERIENCIA_TITLE
+Experience
+
+# EXPERIENCIA_ITEMS
+[TITLE] Developer at Rustique
+[DESC] ESPON COD Project Lead Engineer.
+
+# FORMACION_TITLE
+Education
+
+# FORMACION_ITEMS
+[TITLE] Arts et Metiers ParisTech National School of Arts and Crafts
+[DESC] Master of Engineering in MATLAB and Advanced Programming.
+[TITLE] Universidad EIA School of Engineering
+[DESC] 2014 - 2018 Engineering Program with focus on Automation.
+
+# PROYECTOS_TITLE
+Projects
+
+# PROYECTOS_ITEMS
+[TITLE] Hybrid Calibration of Robotic Arm
+[DESC] Automatic calibration system for FANUC M-Series robots.
+[TITLE] AI-based Paint Mixture Prediction
+[DESC] Automated paint mixing system using machine learning.
+
+# HABILIDADES_TITLE
+Skills
+
+# HABILIDADES_ITEMS
+Automation of Embedded Processes (AP)
+JavaScript
+Python
+Robotics
+Machine Learning
+
+# CONTACTO_TITLE
+Contact
+
+# CONTACTO_EMAIL
+your.email@example.com
+
+# CONTACTO_SOCIAL
+[LINKEDIN] https://linkedin.com/in/yourusername
+[GITHUB] https://github.com/yourusername
+[TWITTER] https://twitter.com/yourusername
