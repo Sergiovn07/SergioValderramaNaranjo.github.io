@@ -58,15 +58,21 @@ footer {
     width: 100%;
 }
 
-/* Estilos adicionales para el contenido (puedes personalizarlos más) */
-.bibliografia-item, .proyecto-item, .informacion-item {
+/* Estilos adicionales para el contenido */
+.experiencia-item,
+.formacion-item,
+.proyecto-item,
+.habilidad-item {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #eee;
     border-radius: 4px;
 }
 
-.bibliografia-item h3, .proyecto-item h3, .informacion-item h3 {
+.experiencia-item h3,
+.formacion-item h3,
+.proyecto-item h3,
+.habilidad-item h3 {
     margin-top: 0;
     color: #555;
 }
